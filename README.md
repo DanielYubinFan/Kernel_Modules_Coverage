@@ -8,7 +8,6 @@ I recommand you to use "make menuconfig" to configure the GCOV functionatity. Fo
 sudo make menuconfig
 ```
 you'll come into a config GUI. Follow [these](https://github.com/DanielYubinFan/Kernel_Modules_Coverage/issues/1) images to enable GCOV utilities. 
-Then re-make and re-install the whole kernel.
 
 ### Instrument the code with GOCV flags
 Add GCOV compliation flags into e1000's Makefile. 
@@ -17,7 +16,7 @@ GCOV_PROFILE := y
 CCFLAGS = -ftest-coverage -fprofile-arcs
 export CCFLAGS
 ```
-
+Then re-make and re-install the whole kernel. The compliation results are under /sys/(there are also a e1000.mod.gcno in the source code folder)
 ### Installing
 
 A step by step series of examples that tell you have to get a development env running
