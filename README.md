@@ -7,7 +7,7 @@ I recommand you to use "make menuconfig" to configure the GCOV functionatity. Fo
 ```
 sudo make menuconfig
 ```
-you'll come into a config GUI. 
+you'll come into a config GUI. [here](https://github.com/DanielYubinFan/Kernel_Modules_Coverage/issues/1)
 ### Prerequisites
 
 What things you need to install the software and how to install them
