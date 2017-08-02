@@ -16,16 +16,16 @@ GCOV_PROFILE := y
 CCFLAGS = -ftest-coverage -fprofile-arcs
 export CCFLAGS
 ```
-Then re-make and re-install the whole kernel. The compliation results are under /sys/
+Then re-make and re-install the whole kernel. The compliation results are under /sys/kernel/debug/gcov/$pwd. Each of the source code file has its own .gcda and .gcno files.
+
 ![](https://github.com/DanielYubinFan/Kernel_Modules_Coverage/blob/master/Screenshot%20from%202017-08-02%2014:16:07.png)
-![]()
+![](https://github.com/DanielYubinFan/Kernel_Modules_Coverage/blob/master/Screenshot%20from%202017-08-02%2014:17:18.png)
 
 (there are also a e1000.mod.gcno in the source code folder)
-### Installing
+### Run workload by the new module
 
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
+Remove the old e1000 module and install youe new e1000.ko. When the new module is initialized and run, the .gcda and .gcno files are updated. Then you need to run some commands to invoke the driver functions. Here is my workload file, it's composed by some ethernet commmands. You can also build your onw workload. 
+![]()
 
 ```
 Give the example
