@@ -29,6 +29,9 @@
 #
 # Makefile for the Intel(R) PRO/1000 ethernet driver
 #
+GCOV_PROFILE := y
+CCFLAGS = -ftest-coverage -fprofile-arcs
+export CCFLAGS
 
 obj-$(CONFIG_E1000) += e1000.o
 
