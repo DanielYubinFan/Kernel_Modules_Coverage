@@ -16,7 +16,11 @@ GCOV_PROFILE := y
 CCFLAGS = -ftest-coverage -fprofile-arcs
 export CCFLAGS
 ```
-Then re-make and re-install the whole kernel. The compliation results are under /sys/(there are also a e1000.mod.gcno in the source code folder)
+Then re-make and re-install the whole kernel. The compliation results are under /sys/
+![](https://github.com/DanielYubinFan/Kernel_Modules_Coverage/blob/master/Screenshot%20from%202017-08-02%2014:16:07.png)
+![]()
+
+(there are also a e1000.mod.gcno in the source code folder)
 ### Installing
 
 A step by step series of examples that tell you have to get a development env running
