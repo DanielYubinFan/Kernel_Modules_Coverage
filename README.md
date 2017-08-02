@@ -3,17 +3,19 @@
 Let me take e1000 network driver module as an example. The path of its code in linux source package is /linux-x.x.x/drivers/net/ethernet/intel/e1000. 
 
 ### Re-compile the kernel with GCOV functionality enabled.
-I recommand you to use "make menuconfig" to configure the GCOV functionatity. Follow [here](https://medium.freecodecamp.org/building-and-installing-the-latest-linux-kernel-from-source-6d8df5345980)to recompile a linux kernel and install it. When you enter:
+I recommand you to use "make menuconfig" to configure the GCOV functionatity. Follow [here](https://medium.freecodecamp.org/building-and-installing-the-latest-linux-kernel-from-source-6d8df5345980) to recompile a linux kernel and install it. When you enter:
 ```
 sudo make menuconfig
 ```
-you'll come into a config GUI. [here](https://github.com/DanielYubinFan/Kernel_Modules_Coverage/issues/1)
-### Prerequisites
+you'll come into a config GUI. Follow [these](https://github.com/DanielYubinFan/Kernel_Modules_Coverage/issues/1) images to enable GCOV utilities. 
+Then re-make and re-install the whole kernel.
 
-What things you need to install the software and how to install them
-
+### Instrument the code with GOCV flags
+Add GCOV compliation flags into e1000's Makefile. 
 ```
-Give examples
+GCOV_PROFILE := y
+CCFLAGS = -ftest-coverage -fprofile-arcs
+export CCFLAGS
 ```
 
 ### Installing
