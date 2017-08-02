@@ -1,11 +1,13 @@
-## To caculate the code coverage of a linux kernel module by gcov & lcov
+## To caculate the code coverage of a linux kernel module by GCOV & LCOV
 
 Let me take e1000 network driver module as an example. The path of its code in linux source package is /linux-x.x.x/drivers/net/ethernet/intel/e1000. 
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
+### Re-compile the kernel with GCOV functionality enabled.
+I recommand you to use "make menuconfig" to configure the GCOV functionatity. Follow [here](https://medium.freecodecamp.org/building-and-installing-the-latest-linux-kernel-from-source-6d8df5345980)to recompile a linux kernel and install it. When you enter:
+```
+sudo make menuconfig
+```
+you'll come into a config GUI. 
 ### Prerequisites
 
 What things you need to install the software and how to install them
