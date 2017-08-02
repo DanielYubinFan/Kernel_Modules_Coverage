@@ -22,73 +22,11 @@ Then re-make and re-install the whole kernel. The compliation results are under 
 ![](https://github.com/DanielYubinFan/Kernel_Modules_Coverage/blob/master/Screenshot%20from%202017-08-02%2014:17:18.png)
 
 (there are also a e1000.mod.gcno in the source code folder)
+
 ### Run workload by the new module
+Remove the old e1000 module and install youe new e1000.ko. When the new module is initialized and run, the .gcda and .gcno files are updated. Then you need to run some commands to invoke the driver functions. [Here](https://github.com/DanielYubinFan/Kernel_Modules_Coverage/blob/master/workload.sh) is my workload file, it's composed by some ethernet commmands. You can also build your onw workload. 
 
-Remove the old e1000 module and install youe new e1000.ko. When the new module is initialized and run, the .gcda and .gcno files are updated. Then you need to run some commands to invoke the driver functions. Here is my workload file, it's composed by some ethernet commmands. You can also build your onw workload. 
-![]()
+## Generate coverage data
 
-```
-Give the example
-```
 
-And repeat
 
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
