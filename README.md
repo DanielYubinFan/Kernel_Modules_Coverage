@@ -27,6 +27,20 @@ Then re-make and re-install the whole kernel. The compliation results are under 
 Remove the old e1000 module and install youe new e1000.ko. When the new module is initialized and run, the .gcda and .gcno files are updated. Then you need to run some commands to invoke the driver functions. [Here](https://github.com/DanielYubinFan/Kernel_Modules_Coverage/blob/master/workload.sh) is my workload file, it's composed by some ethernet commmands. You can also build your onw workload. 
 
 ## Generate coverage data
+After running the new module, you can generate coverage data by using lcov commands (geninfo && genhtml) which take .gcda and .gcno as sources. Or you can use my [kcov.sh]() directly under the e1000 source code path.
+You can check the coverage information in the lcov_data folder 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
