@@ -1,4 +1,4 @@
-## To caculate the code coverage of a linux kernel module by GCOV & LCOV
+## To calculate the code coverage of a linux kernel module by GCOV & LCOV
 
 Let me take e1000 network driver module as an example. The path of its code in linux source package is /linux-x.x.x/drivers/net/ethernet/intel/e1000. 
 
